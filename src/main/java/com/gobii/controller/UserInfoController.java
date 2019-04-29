@@ -21,9 +21,10 @@ public class UserInfoController {
     private UserInfoService userInfoService;
 
     @GetMapping("/getUserTable")
-    public UserTable getUserTable(@RequestParam(defaultValue = "1") Integer page,
+    public UserTable getUserTable(@RequestParam(defaultValue = "0") Integer offset,
                                   @RequestParam(defaultValue = "10") Integer limit){
 
+        Integer page = (offset/limit)+1;
         UserTable userTable = userInfoService.getUserTable(page, limit);
         return userTable;
     }
