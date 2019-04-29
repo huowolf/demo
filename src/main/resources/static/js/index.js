@@ -19,4 +19,21 @@ $('#table').bootstrapTable({
         field: 'email',
         title: '邮箱'
     }]
-  })
+});
+
+var setting = {
+    data: {
+        simpleData: {
+            enable: true
+        }
+    },
+    async: {
+        enable: true,
+        url:"/tree/getTreeNodes",
+        autoParam:["id"]
+    }
+};
+
+$(document).ready(function(){
+    $.fn.zTree.init($("#treeDemo"), setting);
+});

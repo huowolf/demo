@@ -1,0 +1,10 @@
+.ztree *{
+    font-size: 14px;
+}
+.ztree li{
+    line-height: 22px;
+}
+.ztree li span {
+    line-height: 22px;
+}
+
